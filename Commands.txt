@@ -1,0 +1,11 @@
+To detect the face- 
+python vidcap.py
+
+To take stills from the video- 
+python imview.py
+
+To train the algorithm- 
+python extract_embeddings.py --dataset ./dataset --embeddings ./output/embeddings.pickle --detector ./face_detection_model --embedding-model openface_nn4.small2.v1.t7
+
+To test the algorithm- 
+python train_fuzzy.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --embeddings ./output/embeddings.pickle --le ./output/le.pickle
